@@ -12,7 +12,7 @@ public class KeyPressesPage implements IPageObject {
     }
 
     public KeyPressesPage fillInputField(String value) {
-        $("#content input").setValue(value);
+        $("input#target").setValue(value);
         return this;
     }
 
