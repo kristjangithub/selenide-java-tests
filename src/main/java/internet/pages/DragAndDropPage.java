@@ -1,7 +1,7 @@
 package internet.pages;
 
 import internet.interfaces.IPageObject;
-import internet.data.DraggableColumn;
+import internet.data.DraggableBox;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
@@ -13,7 +13,7 @@ public class DragAndDropPage implements IPageObject {
         return "/drag_and_drop";
     }
 
-    public DragAndDropPage dragColumnTo(DraggableColumn source, DraggableColumn target) {
+    public DragAndDropPage dragBoxTo(DraggableBox source, DraggableBox target) {
         $(source.getCssSelector()).dragAndDropTo(target.getCssSelector());
         return this;
     }

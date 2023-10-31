@@ -1,13 +1,13 @@
 package internet.data;
 
-public enum DraggableColumn {
+public enum DraggableBox {
 
-    COLUMN_A("#column-a"),
-    COLUMN_B("#column-b");
+    BOX_A("#column-a"),
+    BOX_B("#column-b");
 
     private final String cssSelector;
 
-    DraggableColumn(String cssSelector) {
+    DraggableBox(String cssSelector) {
         this.cssSelector = cssSelector;
     }
 
