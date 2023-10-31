@@ -14,7 +14,15 @@ public class BaseTest {
 
     @BeforeSuite
     public void setup() {
-        configureSelenide();
+        Configuration.baseUrl = Constants.BASE_URL;
+        Configuration.browserSize = Constants.BROWSER_SIZE;
+        Configuration.browser = Constants.BROWSER;
+        Configuration.browserVersion = Constants.BROWSER_VERSION;
+        Configuration.timeout = Constants.TIMEOUT;
+        Configuration.headless = Constants.IS_HEADLESS;
+        Configuration.reportsFolder = Constants.REPORTS_FOLDER_PATH;
+        Configuration.screenshots = false;
+        Configuration.savePageSource = false;
     }
 
     @AfterMethod
@@ -29,17 +37,5 @@ public class BaseTest {
 
     public void visit(String url) {
         Selenide.open(Constants.BASE_URL + url);
-    }
-
-    private void configureSelenide() {
-        Configuration.baseUrl = Constants.BASE_URL;
-        Configuration.browserSize = Constants.BROWSER_SIZE;
-        Configuration.browser = Constants.BROWSER;
-        Configuration.browserVersion = Constants.BROWSER_VERSION;
-        Configuration.timeout = Constants.TIMEOUT;
-        Configuration.headless = Constants.IS_HEADLESS;
-        Configuration.reportsFolder = Constants.REPORTS_FOLDER_PATH;
-        Configuration.screenshots = false;
-        Configuration.savePageSource = false;
     }
 }
